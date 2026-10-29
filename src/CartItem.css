@@ -1,0 +1,239 @@
+/* ============================================================
+   CartItem.css — Cart page styles
+   ============================================================ */
+
+/* ---------- Page Wrapper ---------- */
+.cart-page {
+  background-color: #f0faf0;
+  min-height: 80vh;
+  padding: 2rem;
+}
+
+.cart-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* ---------- Headings ---------- */
+.cart-heading {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #1b5e20;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Total Banner ---------- */
+.cart-total-banner {
+  background: linear-gradient(135deg, #1b5e20, #2e7d32);
+  color: #c8f5c8;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 0.85rem 1.4rem;
+  border-radius: 10px;
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-total-amount {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+/* ---------- Item Cards ---------- */
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.cart-item-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1rem 1.2rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.cart-item-card:hover {
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.15);
+}
+
+.cart-item-image {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* ---------- Item Details ---------- */
+.cart-item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.cart-item-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1b5e20;
+}
+
+.cart-item-unit-price {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.cart-item-subtotal {
+  font-size: 0.95rem;
+  color: #2e7d32;
+}
+
+/* ---------- Quantity Controls ---------- */
+.cart-item-qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.3rem 0;
+}
+
+.qty-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #43a047;
+  background: transparent;
+  color: #2e7d32;
+  font-size: 1.15rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.qty-btn:hover {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.qty-display {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1b5e20;
+  min-width: 28px;
+  text-align: center;
+}
+
+/* ---------- Delete Button ---------- */
+.delete-btn {
+  background: transparent;
+  border: 2px solid #e57373;
+  color: #c62828;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  background: #c62828;
+  color: #fff;
+}
+
+/* ---------- Cart Action Buttons ---------- */
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.continue-btn {
+  background: transparent;
+  border: 2px solid #2e7d32;
+  color: #2e7d32;
+  padding: 0.7rem 1.6rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.continue-btn:hover {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.checkout-btn {
+  background: linear-gradient(135deg, #e65100, #ff6f00);
+  border: none;
+  color: #fff;
+  padding: 0.7rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(230, 81, 0, 0.4);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.checkout-btn:hover {
+  background: linear-gradient(135deg, #bf360c, #e65100);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(230, 81, 0, 0.5);
+}
+
+/* ---------- Empty Cart ---------- */
+.cart-empty {
+  text-align: center;
+  padding: 3.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cart-empty-text {
+  font-size: 1.2rem;
+  color: #4caf50;
+  font-weight: 600;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .cart-item-card {
+    flex-wrap: wrap;
+  }
+
+  .cart-item-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cart-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .continue-btn,
+  .checkout-btn {
+    text-align: center;
+  }
+}
